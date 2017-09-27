@@ -17,55 +17,28 @@ var columnNames = [
     "remarks"
 ]
 var myObject = {};
-myObject["_id"] = "AE"
-myObject.change = "";
-myObject.country = "United Arab Emirates";
-myObject.locations = [];
-myObject.locations.push({});
-myObject.locations[0]["location"] = "DXB";
-myObject.locations[0]["name"] = "Dubai";
-myObject.locations[0].details = [];
-myObject.locations[0].details.push({});
-myObject.locations[0].details[0].change = "";
-myObject.locations[0].details[0].country = "AE";
-myObject.locations[0].details[0]["location"] = "DXB";
-myObject.locations[0].details[0]["name"] = "Dubai";
-myObject.locations[0].details[0].nameSansDiacritics = "Dubia";
-myObject.locations[0].details[0].subdivision = "AD";
-myObject.locations[0].details[0].function = "1--45-7-";
-myObject.locations[0].details[0]["status"] = "";
-myObject.locations[0].details[0].date = "1709";
-myObject.locations[0].details[0].iata = "DXB";
-myObject.locations[0].details[0].coordinates = "5400N 2400E";
-myObject.locations[0].details[0].remarks = "Here's looking at you kid";
+// myObject["_id"] = "AE"
+// myObject.change = "";
+// myObject.country = "United Arab Emirates";
+// myObject.locations = [];
+// myObject.locations.push({});
+// myObject.locations[0]["location"] = "DXB";
+// myObject.locations[0]["name"] = "Dubai";
+// myObject.locations[0].details = [];
+// myObject.locations[0].details.push({});
+// myObject.locations[0].details[0].change = "";
+// myObject.locations[0].details[0].country = "AE";
+// myObject.locations[0].details[0]["location"] = "DXB";
+// myObject.locations[0].details[0]["name"] = "Dubai";
+// myObject.locations[0].details[0].nameSansDiacritics = "Dubia";
+// myObject.locations[0].details[0].subdivision = "AD";
+// myObject.locations[0].details[0].function = "1--45-7-";
+// myObject.locations[0].details[0]["status"] = "";
+// myObject.locations[0].details[0].date = "1709";
+// myObject.locations[0].details[0].iata = "DXB";
+// myObject.locations[0].details[0].coordinates = "5400N 2400E";
+// myObject.locations[0].details[0].remarks = "Here's looking at you kid";
 
-console.log(myObject);
-console.log(JSON.stringify(myObject, null, 3));
-
-// var countryNode = [
-//     ["_id", ""],
-//     ["name", ""],
-//     ["locations", [
-//         ["location", ""]
-//         ["details", [
-//             ["change", ""],
-//             ["country", ""],
-//             ["location", ""],
-//             ["name", ""],
-//             ["nameSansDiacritics", ""],
-//             ["subdivision", ""],
-//             ["function", ""],
-//             ["status", ""],
-//             ["date", ""],
-//             ["iata", ""],
-//             ["coordinates", ""],
-//             ["remarks", ""]
-//         ]
-//         ]
-//     ]
-//     ]
-// ]
-// locodenosql.js
 module.exports = function (fileName) {
     var currentCountry = "";
     var countriesFound = 0;
@@ -86,11 +59,9 @@ module.exports = function (fileName) {
         if (lineRead.country != myObject["_id"]) {
             if (countriesFound) {
                 // Do something with the now complete UNLOCODE country collection
-                console.log(JSON.stringify(myObject,null,3));
-                console.log(myObject.country + " had " + myObject.locations.length + " locations");
-                
+             //   console.log(JSON.stringify(myObject,null,3));
+                console.log(myObject.country + " had " + myObject.locations.length + " locations");               
                 locationsFound = 0;
-
             }
 
             myObject["_id"] = lineRead.country;
