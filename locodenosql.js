@@ -62,6 +62,6 @@ module.exports = function (fileName) {
     readline.on('close', function () {
         console.log('done!');
         console.log(countriesFound + " countries found");
-    })
+    });
     return;
-}
+};
