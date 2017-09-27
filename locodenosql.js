@@ -17,7 +17,6 @@ var columnNames = [
     "remarks"
 ]
 
-
 module.exports = function (fileName) {
     var currentCountry = "";
     var countriesFound = 0;
@@ -62,6 +61,8 @@ module.exports = function (fileName) {
     readline.on('close', function () {
         console.log('done!');
         console.log(countriesFound + " countries found");
+        return;
+
     })
-    return;
+
 }
