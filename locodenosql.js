@@ -37,7 +37,6 @@ myObject.locations[0].details[0].date = "1709";
 myObject.locations[0].details[0].iata = "DXB";
 myObject.locations[0].details[0].coordinates = "5400N 2400E";
 myObject.locations[0].details[0].remarks = "Here's looking at you kid";
-
 console.log(myObject);
 console.log(JSON.stringify(myObject,null,3));
 
