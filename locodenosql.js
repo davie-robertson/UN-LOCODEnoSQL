@@ -15,7 +15,7 @@ var columnNames = [
     "iata",
     "coordinates",
     "remarks"
-]
+];
 
 module.exports = function (fileName) {
     var currentCountry = "";
@@ -34,7 +34,7 @@ module.exports = function (fileName) {
         lineRead = _.fromPairs(_.zip(columnNames, _.split(line, ',')));
 
         // Check to see if we have found a new country
-        if (lineRead.country != myObject["_id"]) {
+        if (lineRead.country != myObject._id) {
             if (countriesFound) {
                 // Do something with the now complete UNLOCODE country collection
                 //   console.log(JSON.stringify(myObject,null,3));
@@ -42,8 +42,8 @@ module.exports = function (fileName) {
                 locationsFound = 0;
             }
 
-            myObject["_id"] = lineRead.country;
-            myObject["country"] = lineRead.name;
+            myObject._id = lineRead.country;
+            myObject.country = lineRead.name;
             myObject.locations = _.remove(myObject.locations, true);
 
             countriesFound += 1;
@@ -51,9 +51,9 @@ module.exports = function (fileName) {
         }
         else {
             myObject.locations.push({});
-            myObject.locations[locationsFound]['location'] = lineRead.location
-            myObject.locations[locationsFound]['name'] = lineRead.name
-            myObject.locations[locationsFound]['details'] = lineRead
+            myObject.locations[locationsFound].location = lineRead.location;
+            myObject.locations[locationsFound].name = lineRead.name;
+            myObject.locations[locationsFound].details = lineRead;
             locationsFound += 1;
         }
 
