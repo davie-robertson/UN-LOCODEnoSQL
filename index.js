@@ -1,2 +1,2 @@
-var codes = require("./locodenosql");
-codes.getLocations("./UNLOCODE.csv");
+var codes = require('./locodenosql');
+codes.getLocations('./UNLOCODE.csv');
