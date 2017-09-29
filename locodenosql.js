@@ -1,6 +1,12 @@
 const fs = require('fs');
 const _ = require('lodash');
 const readLine = require('readline');
+const events = require('events');
+const eventEmitter = new events.EventEmitter();
+module.exports = {
+    getLocations: getLocations,
+  };
+
 
 /**
  * Generate a JSON string for each UNLOCODE
@@ -38,6 +44,7 @@ function getLocations(fileName) {
     if (lineRead.country != myObject._id) {
       if (countriesFound) {
         // Do something with the now complete UNLOCODE country collection
+        eventEmitter.emit('recordFound', JSON.stringify(myObject, null, 3) );
         //   console.log(JSON.stringify(myObject,null,3));
         console.log(
           myObject.country + ' had ' + myObject.locations.length + ' locations'
@@ -63,6 +70,4 @@ function getLocations(fileName) {
   });
   return;
 }
-module.exports = {
-  getLocations: getLocations,
-};
+
