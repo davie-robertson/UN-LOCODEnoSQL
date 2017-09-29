@@ -1,8 +1,8 @@
-var fs = require('fs');
-var _ = require('lodash');
-var readLine = require('readline');
+const fs = require('fs');
+const _ = require('lodash');
+const readLine = require('readline');
 
-var columnNames = [
+const columnNames = [
     "change",
     "country",
     "location",
