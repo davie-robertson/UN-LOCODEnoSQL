@@ -17,8 +17,7 @@ var columnNames = [
     "remarks"
 ];
 
-
-module.exports = function (fileName) {
+function getLocations(fileName) {
     var currentCountry = "";
     var countriesFound = 0;
     var locationsFound = 0;
@@ -64,4 +63,7 @@ module.exports = function (fileName) {
         console.log(countriesFound + " countries found");
     });
     return;
-};
+}
+module.exports = {
+getLocations : getLocations
+}
