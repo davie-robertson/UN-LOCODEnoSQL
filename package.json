@@ -27,6 +27,7 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "eslint-config-google": "^0.9.1"
+    "eslint-config-google": "^0.9.1",
+    "prettier-eslint": "^8.2.0"
   }
 }
