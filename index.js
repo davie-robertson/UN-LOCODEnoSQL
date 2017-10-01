@@ -7,13 +7,15 @@ GetLocations.on('recordFound', (data) => {
  * a JSON string (data). These can now be added to a NONSQL document 
  */
 
-  console.log(`Received data: "${data}"`);
-});
-GetLocations.on('done', (data) => {
-  /*
-All locationes have now been imported
-*/
-  console.log(`done: "${data}"`);
+  // console.log(`Received data: "${data}"`);
 });
 
-GetLocations.importLocations('./UNLOCODE.csv');
+
+GetLocations.on('done', (message) => {
+/*
+All locationes have now been imported
+*/
+  console.log(`done: "${message}"`);
+});
+
+GetLocations.importLocations('./UNLOCODE.csv', true);
