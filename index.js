@@ -1,13 +1,26 @@
 const UNLOCODE = require('./locodenosql');
 const GetLocations = new UNLOCODE();
 
+const admin = require('firebase-admin');
+const serviceAccount = require('./august-win-firebase-adminsdk-xdcnx-0fadd679d4.json');
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://august-win.firebaseio.com',
+});
+const db = admin.firestore();
+
+
 GetLocations.on('recordFound', (data) => {
   /**
  * A complete country and associated locations have been returned in 
- * a JSON string (data). These can now be added to a NONSQL document 
- * 
- * your code here could add record to your DB for each country
+ * a JSON string (data), which can now be added to a NONSQL document 
  */
+let jData=data;
+let docRef = db.collection('loc').doc(jData._id);
+let setAda = docRef.set(jData) 
+  .then(console.info(jData._id + ' uploaded'));
+
 
   // console.log(`Received data: "${data}"`);
 });
@@ -18,5 +31,6 @@ All locationes have now been imported
 */
   console.log(`done: "${message}"`);
 });
+
 
 GetLocations.importLocations('./UNLOCODE.csv', true);
