@@ -10,27 +10,21 @@ admin.initializeApp({
 });
 const db = admin.firestore();
 
-
 GetLocations.on('recordFound', (data) => {
   /**
  * A complete country and associated locations have been returned in 
  * a JSON string (data), which can now be added to a NONSQL document 
  */
-let jData=data;
-let docRef = db.collection('loc').doc(jData._id);
-let setAda = docRef.set(jData) 
-  .then(console.info(jData._id + ' uploaded'));
-
-
-  // console.log(`Received data: "${data}"`);
+  let jData = data;
+  let docRef = db.collection('loc').doc(jData._id);
+  let setAda = docRef.set(jData).then(console.info(jData._id + ' uploaded'));
 });
 
 GetLocations.on('done', (message) => {
-/*
+  /*
 All locationes have now been imported
 */
   console.log(`done: "${message}"`);
 });
-
 
 GetLocations.importLocations('./UNLOCODE.csv', true);
