@@ -17,7 +17,7 @@ GetLocations.on('recordFound', (data) => {
  */
   let jData = data;
   let docRef = db.collection('loc').doc(jData._id);
-  let setAda = docRef.set(jData).then(console.info(jData._id + ' uploaded'));
+  docRef.set(jData).then(console.info(jData._id + ' uploaded'));
 });
 
 GetLocations.on('done', (message) => {

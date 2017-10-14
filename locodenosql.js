@@ -13,9 +13,9 @@ const functionsList = [
   'Multimodal Function',
   'Fixed Transport Functions (e.g. Oil platform)',
   'Inland Port',
-  'Border Crossing'
+  'Border Crossing',
 ];
-let myObject = {};
+
 /**
  * GetLocations in a library to parse the UNLOCODE ("United Nations Code
  * for Trade and Transport Locations") file(s) available for download as
@@ -48,14 +48,14 @@ class GetLocations extends EventEmitter {
       'date',
       'iata',
       'coordinates',
-      'remarks'
+      'remarks',
     ];
     let _this = this;
     let countriesFound = 0;
     let locationsFound = 0;
-
+    let myObject = {};
     const readline = readLine.createInterface({
-      input: fs.createReadStream(fileName)
+      input: fs.createReadStream(fileName),
     });
 
     /* Read a line from the input stream/file */
@@ -74,7 +74,7 @@ class GetLocations extends EventEmitter {
 
           // myObject={};
           myObject._id = lineRead.country;
-          myObject.country = lineRead.name;
+          myObject.country = lineRead.name.substring(1);
           myObject.locations = _.remove(myObject.locations, true);
           countriesFound += 1;
         } else {
@@ -88,7 +88,7 @@ class GetLocations extends EventEmitter {
             'country',
             'location',
             'name',
-            'nameSansDiacritics'
+            'nameSansDiacritics',
           ]);
           locationsFound += 1;
 
@@ -127,18 +127,18 @@ function deNormalise(LineRead) {
   if (LineRead.coordinates != '') {
     let coordinates = {
       latitude: 0,
-      longitude: 0
+      longitude: 0,
     };
     coordinates.latitude = _.toNumber(
       LineRead.coordinates.substring(0, 2) +
-        '.' +
-        LineRead.coordinates.substring(2, 4)
+      '.' +
+      LineRead.coordinates.substring(2, 4)
     );
 
     coordinates.longitude = _.toNumber(
       LineRead.coordinates.substring(6, 9) +
-        '.' +
-        LineRead.coordinates.substring(9, 11)
+      '.' +
+      LineRead.coordinates.substring(9, 11)
     );
 
     if (LineRead.coordinates.includes('S')) {
