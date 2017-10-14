@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/davie-robertson/UN-LOCODEnoSQL#readme",
   "dependencies": {
-    "firebase": "^4.5.0",
-    "firebase-admin": "^5.4.1",
+    "firebase": "^4.5.1",
+    "firebase-admin": "^5.4.2",
     "lodash": "^4.17.4",
-    "mongodb": "^2.2.31"
+    "mongodb": "^2.2.33"
   },
   "devDependencies": {
     "eslint-config-google": "^0.9.1",
-    "prettier-eslint": "^8.2.0"
+    "prettier-eslint": "^8.2.1"
   }
 }
