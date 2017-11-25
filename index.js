@@ -17,7 +17,7 @@ GetLocations.on('recordFound', (data) => {
  */
   let jData = data;
   let docRef = db.collection('loc').doc(jData._id);
-  docRef.set(jData).then(console.info(jData._id + ' uploaded'));
+  docRef.set(jData).then(console.info(jData._id + ' uploaded with '+ jData.locations.length +' locations found'));
 });
 
 GetLocations.on('done', (message) => {
@@ -27,4 +27,4 @@ All locationes have now been imported
   console.log(`done: "${message}"`);
 });
 
-GetLocations.importLocations('./sorted.txt', true);
+ GetLocations.importLocations('./sorted.txt', true);

@@ -11,7 +11,7 @@ const functionsList = [
   'Airport',
   'Postal Exchange Office',
   'Multimodal Function',
-  'Fixed Transport Functions (e.g. Oil platform)',
+  'Fixed Transport Functions',
   'Inland Port',
   'Border Crossing',
 ];
@@ -43,8 +43,8 @@ class GetLocations extends EventEmitter {
       'name',
       'nameSansDiacritics',
       'subdivision',
+      'status', // swapped status in function due to error on expoering csv
       'function',
-      'status',
       'date',
       'iata',
       'coordinates',
@@ -53,55 +53,60 @@ class GetLocations extends EventEmitter {
     let _this = this;
     let countriesFound = 0;
     let locationsFound = 0;
-    let myObject = {};
+    let currentCountry = {};
     const readline = readLine.createInterface({
-      input: fs.createReadStream(fileName, {encoding: 'UTF8'} ),
+      input: fs.createReadStream(fileName, {encoding: 'utf8'}),
     });
 
     /* Read a line from the input stream/file */
     readline.on('line', function(line) {
-      if ((_.trim(line).length)>12) {
-        let lineRead = [];
-        line = _.replace(line, /"/g, '');
-        lineRead = _.fromPairs(_.zip(columnNames, _.split(line, ',')));
-        // Check to see if we have found a new country
-        if (lineRead.country != myObject._id) {
-          if (countriesFound) {
-            // emit the now complete UNLOCODE country collection
-            _this.emit('recordFound', myObject);
-            if (myObject._id=='AE') console.log(JSON.stringify(myObject, true, 3));
-            locationsFound = 0; //  Reset the location index for the new country
-          }
+      let lineRead = [];
+      // remove double quotes for all values in the CSV file
+      line = _.replace(line, /"/g, '');
+      // transpose all the values in the file input line with the array of columns 
+      lineRead = _.fromPairs(_.zip(columnNames, _.split(line, ',')));
 
-          // myObject={};
-          myObject._id = lineRead.country;
-          myObject.country = lineRead.name.substring(1);
-          myObject.locations = _.remove(myObject.locations, true);
-          countriesFound += 1;
-        } else {
-          myObject.locations.push({});
-          myObject.locations[locationsFound].location = lineRead.location;
-          myObject.locations[locationsFound].name = lineRead.name;
-          myObject.locations[locationsFound].nameSansDiacritics =
-            lineRead.nameSansDiacritics;
-
-          myObject.locations[locationsFound].details = _.omit(lineRead, [
-            'country',
-            'location',
-            'name',
-            'nameSansDiacritics',
-          ]);
-          locationsFound += 1;
-
-          // do we want to denormalise the output?
-          if (decode) {
-            lineRead = deNormalise(lineRead);
-          }
+      // Check to see if we have found a new country
+      if (lineRead.country != currentCountry._id) {
+        // Check to see if this is a new country and not just
+        // the first country found, if that is the case then 
+        // send back a complete Object/Array of the country
+        if (countriesFound) {
+          // emit the now complete UNLOCODE country collection
+          _this.emit('recordFound', currentCountry);
+          // if (currentCountry._id == 'AE') console.log(JSON.stringify(currentCountry, true, 3));
+          locationsFound = 0; //  Reset the location index for the new country
         }
+
+        // currentCountry={};
+        currentCountry._id = lineRead.country;
+        currentCountry.country = lineRead.name.substring(1);
+        currentCountry.locations = _.remove(currentCountry.locations, true);
+        countriesFound += 1;
+      } else {
+        // the current input line is not a new country, so we will add
+        // a new location to the current country object
+        currentCountry.locations.push({});
+        currentCountry.locations[locationsFound].location = lineRead.location;
+        currentCountry.locations[locationsFound].name = lineRead.name;
+        currentCountry.locations[locationsFound].nameSansDiacritics =
+          lineRead.nameSansDiacritics;
+        // do we want to denormalise the output?
+        if (decode) {
+          lineRead = deNormalise(lineRead);
+        }
+        currentCountry.locations[locationsFound].details = _.omit(lineRead, [
+          'country',
+          'location',
+          'name',
+          'nameSansDiacritics',
+        ]);
+        locationsFound += 1;
       }
     });
+
     readline.on('close', function() {
-      _this.emit('recordFound', myObject);
+      _this.emit('recordFound', currentCountry);
       _this.emit('done', countriesFound + ' countries found');
     });
     return;
@@ -120,10 +125,10 @@ function deNormalise(LineRead) {
   locationFunction = _.replace(locationFunction, /b/g, '9');
   let normLocationFunction = [];
   for (let value of locationFunction) {
-    normLocationFunction.push(functionsList[_.toInteger(value) + 1]+ ': true');
+    normLocationFunction.push(functionsList[_.toInteger(value) + 1] + ': true');
   }
   LineRead.function = normLocationFunction;
-  // now the lat/long coordinate -------------------------------------
+  // now the lat/long coordinate 
   // ddmmN dddmmW, ddmmS dddmmE
   if (LineRead.coordinates != '') {
     let coordinates = {
