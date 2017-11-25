@@ -123,7 +123,13 @@ function deNormalise(LineRead) {
   // remove the '-' chars and swap the B (border crossing) designator to an 8
   let locationFunction = _.replace(LineRead.function, /\W/g, '');
   locationFunction = _.replace(locationFunction, /b/g, '9');
+  
+  
   let normLocationFunction = [];
+  
+  // TODO need to change function to OBJECT value pairs and not array
+  
+  
   for (let value of locationFunction) {
     normLocationFunction.push(functionsList[_.toInteger(value) + 1] + ': true');
   }
