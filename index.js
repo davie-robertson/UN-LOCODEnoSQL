@@ -27,4 +27,4 @@ All locationes have now been imported
   console.log(`done: "${message}"`);
 });
 
-GetLocations.importLocations('./UNLOCODE.csv', true);
+GetLocations.importLocations('./sorted.txt', true);

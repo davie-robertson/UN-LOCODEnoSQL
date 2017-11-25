@@ -1,0 +1,1043 @@
+
+{
+   "_id": "AE",
+   "country": "UNITED ARAB EMIRATES",
+   "locations": [
+      {
+         "location": "",
+         "name": "Ruwais = Ar Ruways",
+         "nameSansDiacritics": "Ruwais = Ar Ruways",
+         "details": {
+            "change": "=",
+            "subdivision": "",
+            "function": "",
+            "status": "",
+            "date": "",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "AAN",
+         "name": "Al Ain",
+         "nameSansDiacritics": "Al Ain",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "AI",
+            "status": "---4----",
+            "date": "9601",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "ABU",
+         "name": "Abu al Bukhoosh",
+         "nameSansDiacritics": "Abu al Bukhoosh",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RL",
+            "status": "1-------",
+            "date": "0307",
+            "iata": "",
+            "coordinates": "2529N 05308E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "AJM",
+         "name": "Ajman",
+         "nameSansDiacritics": "Ajman",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RL",
+            "status": "1-3-----",
+            "date": "0103",
+            "iata": "QAJ",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "AJP",
+         "name": "Al Jeer Port",
+         "nameSansDiacritics": "Al Jeer Port",
+         "details": {
+            "change": "",
+            "subdivision": "RK",
+            "function": "RL",
+            "status": "1-3-----",
+            "date": "1307",
+            "iata": "",
+            "coordinates": "2602N 05603E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "ALB",
+         "name": "Al Barsha",
+         "nameSansDiacritics": "Al Barsha",
+         "details": {
+            "change": "+",
+            "subdivision": "DU",
+            "function": "RL",
+            "status": "--3-----",
+            "date": "1701",
+            "iata": "",
+            "coordinates": "2506N 05511E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "ALQ",
+         "name": "Al Quoz",
+         "nameSansDiacritics": "Al Quoz",
+         "details": {
+            "change": "+",
+            "subdivision": "DU",
+            "function": "RL",
+            "status": "--3-----",
+            "date": "1701",
+            "iata": "",
+            "coordinates": "2507N 05513E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "ALS",
+         "name": "Al Sufouh",
+         "nameSansDiacritics": "Al Sufouh",
+         "details": {
+            "change": "+",
+            "subdivision": "DU",
+            "function": "RL",
+            "status": "--3-----",
+            "date": "1701",
+            "iata": "",
+            "coordinates": "2507N 05511E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "AMF",
+         "name": "Mussafah",
+         "nameSansDiacritics": "Mussafah",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "1-------",
+            "date": "0901",
+            "iata": "",
+            "coordinates": "2423N 05429E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "AMU",
+         "name": "Abu Musa",
+         "nameSansDiacritics": "Abu Musa",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RL",
+            "status": "1-------",
+            "date": "0201",
+            "iata": "",
+            "coordinates": "2552N 05501E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "ARP",
+         "name": "Ahmed Bin Rashid Port",
+         "nameSansDiacritics": "Ahmed Bin Rashid Port",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "1-------",
+            "date": "1407",
+            "iata": "",
+            "coordinates": "2532N 05533E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "ARZ",
+         "name": "Arzanah Island",
+         "nameSansDiacritics": "Arzanah Island",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "0-------",
+            "date": "9506",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "AUH",
+         "name": "Abu Dhabi",
+         "nameSansDiacritics": "Abu Dhabi",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "AI",
+            "status": "1-345---",
+            "date": "1101",
+            "iata": "",
+            "coordinates": "2428N 05422E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "DAS",
+         "name": "Das Island",
+         "nameSansDiacritics": "Das Island",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RL",
+            "status": "1-------",
+            "date": "0003",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "DBI",
+         "name": "Al Mafraq",
+         "nameSansDiacritics": "Al Mafraq",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "--3-----",
+            "date": "1601",
+            "iata": "",
+            "coordinates": "2418N 05436E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "DBP",
+         "name": "Dibba",
+         "nameSansDiacritics": "Dibba",
+         "details": {
+            "change": "",
+            "subdivision": "SH",
+            "function": "RL",
+            "status": "1-3-----",
+            "date": "0401",
+            "iata": "",
+            "coordinates": "2537N 05616E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "DER",
+         "name": "Deira",
+         "nameSansDiacritics": "Deira",
+         "details": {
+            "change": "",
+            "subdivision": "DU",
+            "function": "RL",
+            "status": "--3-----",
+            "date": "1401",
+            "iata": "",
+            "coordinates": "2516N 05519E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "DHF",
+         "name": "Al Dhafra",
+         "nameSansDiacritics": "Al Dhafra",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "AI",
+            "status": "--34----",
+            "date": "0507",
+            "iata": "",
+            "coordinates": "2414N 05432E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "DUJ",
+         "name": "The Palm Jumeirah",
+         "nameSansDiacritics": "The Palm Jumeirah",
+         "details": {
+            "change": "",
+            "subdivision": "DU",
+            "function": "RQ",
+            "status": "1-------",
+            "date": "0901",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "DUY",
+         "name": "Ras Zubbaya (Ras Dubayyah)",
+         "nameSansDiacritics": "Ras Zubbaya (Ras Dubayyah)",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "0-------",
+            "date": "9012",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "DWC",
+         "name": "Dubai World Central Apt",
+         "nameSansDiacritics": "Dubai World Central Apt",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "AI",
+            "status": "--34----",
+            "date": "1007",
+            "iata": "",
+            "coordinates": "2453N 05510E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "DXB",
+         "name": "Dubai",
+         "nameSansDiacritics": "Dubai",
+         "details": {
+            "change": "",
+            "subdivision": "DU",
+            "function": "AI",
+            "status": "1-345---",
+            "date": "0407",
+            "iata": "",
+            "coordinates": "2515N 05516E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "END",
+         "name": "Esnnad",
+         "nameSansDiacritics": "Esnnad",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RQ",
+            "status": "1-------",
+            "date": "0901",
+            "iata": "",
+            "coordinates": "2419N 05427E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "FAT",
+         "name": "Fateh Terminal",
+         "nameSansDiacritics": "Fateh Terminal",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "QQ",
+            "status": "1-------",
+            "date": "8103",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "FJR",
+         "name": "Al Fujayrah",
+         "nameSansDiacritics": "Al Fujayrah",
+         "details": {
+            "change": "",
+            "subdivision": "FU",
+            "function": "AI",
+            "status": "1--4----",
+            "date": "0212",
+            "iata": "",
+            "coordinates": "2507N 05620E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "FMZ",
+         "name": "Musafa",
+         "nameSansDiacritics": "Musafa",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "0-------",
+            "date": "9307",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "FRP",
+         "name": "Free Port",
+         "nameSansDiacritics": "Free Port",
+         "details": {
+            "change": "",
+            "subdivision": "DU",
+            "function": "RL",
+            "status": "1-------",
+            "date": "1407",
+            "iata": "",
+            "coordinates": "2515N 05515E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "HAB",
+         "name": "Habshan",
+         "nameSansDiacritics": "Habshan",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "--3-----",
+            "date": "1207",
+            "iata": "",
+            "coordinates": "2356N 05338E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "HAM",
+         "name": "Al Hamriyah",
+         "nameSansDiacritics": "Al Hamriyah",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RL",
+            "status": "--3-----",
+            "date": "0212",
+            "iata": "",
+            "coordinates": "2529N 05530E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "HTL",
+         "name": "Hulaylah Terminal",
+         "nameSansDiacritics": "Hulaylah Terminal",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "1-------",
+            "date": "0901",
+            "iata": "",
+            "coordinates": "2559N 05556E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "HZP",
+         "name": "Hamriya Free Zone Port",
+         "nameSansDiacritics": "Hamriya Free Zone Port",
+         "details": {
+            "change": "",
+            "subdivision": "DU",
+            "function": "RL",
+            "status": "1-------",
+            "date": "1407",
+            "iata": "",
+            "coordinates": "2518N 05519E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "IND",
+         "name": "Indooroodilly",
+         "nameSansDiacritics": "Indooroodilly",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "--3-----",
+            "date": "0201",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "JAZ",
+         "name": "Al Jazeera Port",
+         "nameSansDiacritics": "Al Jazeera Port",
+         "details": {
+            "change": "",
+            "subdivision": "RK",
+            "function": "RL",
+            "status": "1-------",
+            "date": "1307",
+            "iata": "",
+            "coordinates": "2543N 05548E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "JEA",
+         "name": "Jebel Ali",
+         "nameSansDiacritics": "Jebel Ali",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "QQ",
+            "status": "1-------",
+            "date": "8103",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "JED",
+         "name": "Jebel Dhanna",
+         "nameSansDiacritics": "Jebel Dhanna",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "QQ",
+            "status": "1-------",
+            "date": "8103",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "JYH",
+         "name": "Jumayrah",
+         "nameSansDiacritics": "Jumayrah",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RL",
+            "status": "--3-----",
+            "date": "0201",
+            "iata": "",
+            "coordinates": "2510N 05513E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "KHA",
+         "name": "Khalidia",
+         "nameSansDiacritics": "Khalidia",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "--3-----",
+            "date": "0201",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "KHL",
+         "name": "Mina Khalifa/Abu Dhabi",
+         "nameSansDiacritics": "Mina Khalifa/Abu Dhabi",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RL",
+            "status": "1-------",
+            "date": "1207",
+            "iata": "",
+            "coordinates": "2450N 05440E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "KLB",
+         "name": "Kalba",
+         "nameSansDiacritics": "Kalba",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RL",
+            "status": "1-3-----",
+            "date": "0601",
+            "iata": "",
+            "coordinates": "2504N 05621E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "KLF",
+         "name": "Khor al Fakkan",
+         "nameSansDiacritics": "Khor al Fakkan",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RL",
+            "status": "1-------",
+            "date": "0212",
+            "iata": "",
+            "coordinates": "2520N 05621E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "MAS",
+         "name": "Masfut",
+         "nameSansDiacritics": "Masfut",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "0-------",
+            "date": "9307",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "MBS",
+         "name": "Mubarras Island",
+         "nameSansDiacritics": "Mubarras Island",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "1-------",
+            "date": "9506",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "MKH",
+         "name": "Mina Khalid",
+         "nameSansDiacritics": "Mina Khalid",
+         "details": {
+            "change": "",
+            "subdivision": "SH",
+            "function": "RL",
+            "status": "1-3-----",
+            "date": "0401",
+            "iata": "",
+            "coordinates": "2521N 05522E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "MRP",
+         "name": "Mina Rashid Port",
+         "nameSansDiacritics": "Mina Rashid Port",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "1-------",
+            "date": "1407",
+            "iata": "",
+            "coordinates": "2516N 05517E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "MSA",
+         "name": "Mina Saqr",
+         "nameSansDiacritics": "Mina Saqr",
+         "details": {
+            "change": "",
+            "subdivision": "RK",
+            "function": "RQ",
+            "status": "1-------",
+            "date": "1307",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "MUB",
+         "name": "Mubarek Terminal",
+         "nameSansDiacritics": "Mubarek Terminal",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "QQ",
+            "status": "1-------",
+            "date": "8103",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "MZD",
+         "name": "Mina Zayed/Abu Dhabi",
+         "nameSansDiacritics": "Mina Zayed/Abu Dhabi",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "1-------",
+            "date": "0401",
+            "iata": "",
+            "coordinates": "2431N 05422E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "NHD",
+         "name": "Minhad",
+         "nameSansDiacritics": "Minhad",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "AI",
+            "status": "---4----",
+            "date": "9506",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "OFJ",
+         "name": "Offshore Fujairah",
+         "nameSansDiacritics": "Offshore Fujairah",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "------7-",
+            "date": "0907",
+            "iata": "",
+            "coordinates": "2515N 05640E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "PRA",
+         "name": "Port Rashid",
+         "nameSansDiacritics": "Port Rashid",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "1-------",
+            "date": "9506",
+            "iata": "",
+            "coordinates": "",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "QIW",
+         "name": "Umm al Qaiwain",
+         "nameSansDiacritics": "Umm al Qaiwain",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "AI",
+            "status": "1--4----",
+            "date": "0212",
+            "iata": "",
+            "coordinates": "2534N 05533E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "QWE",
+         "name": "Jebel Ali Free Zone",
+         "nameSansDiacritics": "Jebel Ali Free Zone",
+         "details": {
+            "change": "",
+            "subdivision": "DU",
+            "function": "RL",
+            "status": "1-3-----",
+            "date": "1401",
+            "iata": "",
+            "coordinates": "2500N 05503E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "RAK",
+         "name": "Ras Al Khor",
+         "nameSansDiacritics": "Ras Al Khor",
+         "details": {
+            "change": "",
+            "subdivision": "DU",
+            "function": "RQ",
+            "status": "-----6--",
+            "date": "1007",
+            "iata": "",
+            "coordinates": "2517N 05534E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "REI",
+         "name": "Reem Island",
+         "nameSansDiacritics": "Reem Island",
+         "details": {
+            "change": "+",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "--3-----",
+            "date": "1701",
+            "iata": "",
+            "coordinates": "2429N 05424E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "RFA",
+         "name": "Mirfa",
+         "nameSansDiacritics": "Mirfa",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RQ",
+            "status": "1----6--",
+            "date": "0907",
+            "iata": "",
+            "coordinates": "2528N 05329E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "RKP",
+         "name": "Rak Khor Port",
+         "nameSansDiacritics": "Rak Khor Port",
+         "details": {
+            "change": "",
+            "subdivision": "RK",
+            "function": "RL",
+            "status": "1-------",
+            "date": "1307",
+            "iata": "",
+            "coordinates": "2549N 05557E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "RKT",
+         "name": "Ras al Khaimah",
+         "nameSansDiacritics": "Ras al Khaimah",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "AI",
+            "status": "1--4----",
+            "date": "0212",
+            "iata": "",
+            "coordinates": "2547N 05557E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "RMC",
+         "name": "Rak Maritime City",
+         "nameSansDiacritics": "Rak Maritime City",
+         "details": {
+            "change": "",
+            "subdivision": "RK",
+            "function": "RL",
+            "status": "1-------",
+            "date": "1307",
+            "iata": "",
+            "coordinates": "2557N 05603E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "RUW",
+         "name": "Ar Ruways",
+         "nameSansDiacritics": "Ar Ruways",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RL",
+            "status": "1-------",
+            "date": "0212",
+            "iata": "",
+            "coordinates": "2407N 05244E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "RWP",
+         "name": "Ruwais Port",
+         "nameSansDiacritics": "Ruwais Port",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "1-------",
+            "date": "1407",
+            "iata": "",
+            "coordinates": "2406N 05243E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "SHJ",
+         "name": "Sharjah",
+         "nameSansDiacritics": "Sharjah",
+         "details": {
+            "change": "",
+            "subdivision": "SH",
+            "function": "AI",
+            "status": "1-34----",
+            "date": "1307",
+            "iata": "",
+            "coordinates": "2521N 05523E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "SID",
+         "name": "Sadiyat Island",
+         "nameSansDiacritics": "Sadiyat Island",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "1-------",
+            "date": "0901",
+            "iata": "",
+            "coordinates": "2432N 05424E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "SIL",
+         "name": "Sila",
+         "nameSansDiacritics": "Sila",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "--3-----",
+            "date": "1407",
+            "iata": "",
+            "coordinates": "2404N 05145E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "SRT",
+         "name": "Steven Rock Terminal",
+         "nameSansDiacritics": "Steven Rock Terminal",
+         "details": {
+            "change": "",
+            "subdivision": "RK",
+            "function": "RL",
+            "status": "-----6--",
+            "date": "1407",
+            "iata": "",
+            "coordinates": "2558N 05603E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "SWE",
+         "name": "Swaihan",
+         "nameSansDiacritics": "Swaihan",
+         "details": {
+            "change": "+",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "--3-----",
+            "date": "1701",
+            "iata": "",
+            "coordinates": "2427N 05520E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "ULR",
+         "name": "Umm Al Nar",
+         "nameSansDiacritics": "Umm Al Nar",
+         "details": {
+            "change": "",
+            "subdivision": "",
+            "function": "RQ",
+            "status": "1-------",
+            "date": "0201",
+            "iata": "",
+            "coordinates": "2426N 05430E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "VHT",
+         "name": "Vopak Horizion Terminal",
+         "nameSansDiacritics": "Vopak Horizion Terminal",
+         "details": {
+            "change": "",
+            "subdivision": "RK",
+            "function": "RL",
+            "status": "-----6--",
+            "date": "1407",
+            "iata": "",
+            "coordinates": "2537N 05616E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "YAS",
+         "name": "Yas Island",
+         "nameSansDiacritics": "Yas Island",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "1-------",
+            "date": "1207",
+            "iata": "",
+            "coordinates": "2419N 05236E",
+            "remarks": ""
+         }
+      },
+      {
+         "location": "ZUR",
+         "name": "Zirku Island",
+         "nameSansDiacritics": "Zirku Island",
+         "details": {
+            "change": "",
+            "subdivision": "AZ",
+            "function": "RL",
+            "status": "1-------",
+            "date": "0212",
+            "iata": "",
+            "coordinates": "2453N 05304E",
+            "remarks": ""
+         }
+      }
+   ]
+}
+

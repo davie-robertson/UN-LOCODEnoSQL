@@ -55,12 +55,12 @@ class GetLocations extends EventEmitter {
     let locationsFound = 0;
     let myObject = {};
     const readline = readLine.createInterface({
-      input: fs.createReadStream(fileName),
+      input: fs.createReadStream(fileName, {encoding: 'UTF8'} ),
     });
 
     /* Read a line from the input stream/file */
     readline.on('line', function(line) {
-      if (_.trim(line)) {
+      if ((_.trim(line).length)>12) {
         let lineRead = [];
         line = _.replace(line, /"/g, '');
         lineRead = _.fromPairs(_.zip(columnNames, _.split(line, ',')));
@@ -69,6 +69,7 @@ class GetLocations extends EventEmitter {
           if (countriesFound) {
             // emit the now complete UNLOCODE country collection
             _this.emit('recordFound', myObject);
+            if (myObject._id=='AE') console.log(JSON.stringify(myObject, true, 3));
             locationsFound = 0; //  Reset the location index for the new country
           }
 
@@ -119,7 +120,7 @@ function deNormalise(LineRead) {
   locationFunction = _.replace(locationFunction, /b/g, '9');
   let normLocationFunction = [];
   for (let value of locationFunction) {
-    normLocationFunction.push(functionsList[_.toInteger(value) + 1]);
+    normLocationFunction.push(functionsList[_.toInteger(value) + 1]+ ': true');
   }
   LineRead.function = normLocationFunction;
   // now the lat/long coordinate -------------------------------------
