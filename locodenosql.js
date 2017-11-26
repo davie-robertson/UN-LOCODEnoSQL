@@ -4,11 +4,11 @@ const readLine = require('readline');
 const EventEmitter = require('events');
 
 const functionsList = [
-  'Function not known',
-  'Port',
-  'Rail Terminal',
-  'Road Terminal',
-  'Airport',
+  'Function not known', // 0
+  'Port',               // 1
+  'Rail Terminal',      // 2
+  'Road Terminal',      // 3
+  'Airport',            // 4
   'Postal Exchange Office',
   'Multimodal Function',
   'Fixed Transport Functions',
@@ -74,7 +74,7 @@ class GetLocations extends EventEmitter {
         if (countriesFound) {
           // emit the now complete UNLOCODE country collection
           _this.emit('recordFound', currentCountry);
-          // if (currentCountry._id == 'AE') console.log(JSON.stringify(currentCountry, true, 3));
+          if (currentCountry._id == 'BE') console.log(JSON.stringify(currentCountry, true, 3));
           locationsFound = 0; //  Reset the location index for the new country
         }
 
@@ -131,7 +131,7 @@ function deNormalise(LineRead) {
   
   
   for (let value of locationFunction) {
-    normLocationFunction.push(functionsList[_.toInteger(value) + 1] + ': true');
+    normLocationFunction.push(functionsList[_.toInteger(value)] + ': true');
   }
   LineRead.function = normLocationFunction;
   // now the lat/long coordinate 
