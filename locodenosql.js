@@ -9,11 +9,11 @@ const functionsList = [
   'Rail Terminal',      // 2
   'Road Terminal',      // 3
   'Airport',            // 4
-  'Postal Exchange Office',
-  'Multimodal Function',
-  'Fixed Transport Functions',
-  'Inland Port',
-  'Border Crossing',
+  'Postal Exchange Office',  // 5
+  'Multimodal Function',    // 6
+  'Fixed Transport Functions', // 7
+  'Inland Port', // 8
+  'Border Crossing', // 9
 ];
 
 /**
