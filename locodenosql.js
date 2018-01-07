@@ -66,7 +66,8 @@ class GetLocations extends EventEmitter {
       // transpose all the values in the file input line with the array of columns 
       lineRead = _.fromPairs(_.zip(columnNames, _.split(line, ',')));
 
-      // Check to see if we have found a new country
+
+      // Check to see if we have found a new country (the default sort order for the CSV file is Country, Name)
       if (lineRead.country != currentCountry._id) {
         // Check to see if this is a new country and not just
         // the first country found, if that is the case then 
