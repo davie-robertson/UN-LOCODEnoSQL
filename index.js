@@ -15,9 +15,9 @@ GetLocations.on('recordFound', (data) => {
  * A complete country and associated locations have been returned in 
  * a JSON string (data), which can now be added to a NONSQL document 
  */
- let jData = data;
-  // let docRef = db.collection('loc').doc(jData._id);
-  // docRef.set(jData).then(console.info(jData._id + ' uploaded with ' + jData.locations.length + ' locations found'));
+//  let jData = data;
+//  let docRef = db.collection('loc').doc(jData._id);
+//  docRef.set(jData).then(console.info(jData._id + ' uploaded with ' + jData.locations.length + ' locations found'));
 });
 
 GetLocations.on('done', (message) => {

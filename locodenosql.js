@@ -1,5 +1,3 @@
-import { isNull } from 'util';
-
 const fs = require('fs');
 const _ = require('lodash');
 const readLine = require('readline');
@@ -57,11 +55,11 @@ class GetLocations extends EventEmitter {
     let locationsFound = 0;
     let currentCountry = {};
     const readline = readLine.createInterface({
-      input: fs.createReadStream(fileName, {encoding: 'utf8'}),
+      input: fs.createReadStream(fileName, { encoding: 'utf8' }),
     });
 
     /* Read a line from the input stream/file */
-    readline.on('line', function(line) {
+    readline.on('line', function (line) {
       let lineRead = [];
       // remove double quotes for all values in the CSV file
       line = _.replace(line, /"/g, '');
@@ -114,7 +112,7 @@ class GetLocations extends EventEmitter {
       }
     });
 
-    readline.on('close', function() {
+    readline.on('close', function () {
       _this.emit('recordFound', currentCountry);
       _this.emit('done', countriesFound + ' countries found');
     });
@@ -132,20 +130,18 @@ function deNormalise(LineRead) {
   // remove the '-' chars and swap the B (border crossing) designator to an 8
   let locationFunction = _.replace(LineRead.function, /\W/g, '');
   locationFunction = _.replace(locationFunction, /b/g, '9');
-  console.log(LineRead)
-  
+  LineRead = _.omitBy(LineRead, _.isEmpty)
+
   let normLocationFunction = [];
-   // TODO need to change function to OBJECT value pairs and not array
-   for (let value of locationFunction) {
+  // TODO need to change function to OBJECT value pairs and not array
+  for (let value of locationFunction) {
     normLocationFunction.push(functionsList[_.toInteger(value)] + ': true');
   }
   LineRead.function = normLocationFunction;
 
-
-
-  // now the lat/long coordinate 
-  // ddmmN dddmmW, ddmmS dddmmE
-  if (LineRead.coordinates != '') {
+  // if the coordinates are not empty, we convert to proper lat/long coordinates
+  // ddmmN dddmmW, ddmmS dddmmE -> +/- Lat & Lon
+  if (_.has(LineRead, 'coordinates')) {
     let coordinates = {
       lat: 0,
       lon: 0,
@@ -169,9 +165,7 @@ function deNormalise(LineRead) {
       coordinates.lon = coordinates.lon * -1;
     }
     LineRead.coordinates = coordinates;
-  } else {
-    LineRead.coordinates = null;
-  }
+  } 
   // console.log(LineRead.coordinates);
   return LineRead;
 }
