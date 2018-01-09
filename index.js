@@ -27,4 +27,4 @@ All locationes have now been imported
   console.log(`done: "${message}"`);
 });
 
- GetLocations.importLocations('./2017-2 UNLOCODE CodeList.txt', true);
+ GetLocations.importLocations('./UN_LOCODE_Subs.txt', true);

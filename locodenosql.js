@@ -64,7 +64,7 @@ class GetLocations extends EventEmitter {
       // remove double quotes for all values in the CSV file
       line = _.replace(line, /"/g, '');
       // transpose all the values in the file input line with the array of columns 
-      lineRead = _.fromPairs(_.zip(columnNames, _.split(line, ',')));
+      lineRead = _.fromPairs(_.zip(columnNames, _.split(line, '\t')));
 
 
       // Check to see if we have found a new country (the default sort order for the CSV file is Country, Name)
@@ -75,7 +75,7 @@ class GetLocations extends EventEmitter {
         if (countriesFound) {
           // emit the now complete UNLOCODE country collection
           _this.emit('recordFound', currentCountry);
-          if (currentCountry._id == 'BE') console.log(JSON.stringify(currentCountry, true, 3));
+          if (currentCountry._id == 'AE') console.log(JSON.stringify(currentCountry, true, 3));
           locationsFound = 0; //  Reset the location index for the new country
         }
 
@@ -101,6 +101,10 @@ class GetLocations extends EventEmitter {
           'location',
           'name',
           'nameSansDiacritics',
+          'change',
+          'status',
+          'date',
+          'remarks',
         ]);
         locationsFound += 1;
       }
