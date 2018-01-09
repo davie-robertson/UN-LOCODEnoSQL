@@ -85,29 +85,30 @@ class GetLocations extends EventEmitter {
         currentCountry.locations = _.remove(currentCountry.locations, true);
         countriesFound += 1;
       } else {
-        // the current input line is not a new country, so we will add
-        // a new location to the current country object
-        currentCountry.locations.push({});
-        currentCountry.locations[locationsFound].location = lineRead.location;
-        currentCountry.locations[locationsFound].name = lineRead.name;
-        currentCountry.locations[locationsFound].nameSansDiacritics =
-          lineRead.nameSansDiacritics;
-        // do we want to denormalise the output?
-        if (decode) {
-          lineRead = deNormalise(lineRead);
+        // the current input line is not a new country, check it's not an alias 
+        // then add a new location to the current country object
+        if (lineRead.change != '=') {
+          currentCountry.locations.push({});
+          currentCountry.locations[locationsFound].location = lineRead.location;
+          currentCountry.locations[locationsFound].name = lineRead.name;
+          currentCountry.locations[locationsFound].nameSansDiacritics =
+            lineRead.nameSansDiacritics;
+          // do we want to denormalise the output?
+          if (decode) {
+            lineRead = deNormalise(lineRead);
+          }
+
+          currentCountry.locations[locationsFound].details = _.omit(lineRead, [
+            'country',
+            'location',
+            'name',
+            'nameSansDiacritics',
+            'change',
+            'status',
+            'date',
+            'remarks',
+          ]);
         }
-
-        currentCountry.locations[locationsFound].details = _.omit(lineRead, [
-          'country',
-          'location',
-          'name',
-          'nameSansDiacritics',
-          'change',
-          'status',
-          'date',
-          'remarks',
-        ]);
-
         locationsFound += 1;
       }
     });
@@ -165,7 +166,7 @@ function deNormalise(LineRead) {
       coordinates.lon = coordinates.lon * -1;
     }
     LineRead.coordinates = coordinates;
-  } 
+  }
   // console.log(LineRead.coordinates);
   return LineRead;
 }
