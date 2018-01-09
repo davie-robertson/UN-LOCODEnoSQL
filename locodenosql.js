@@ -1,3 +1,5 @@
+import { isNull } from 'util';
+
 const fs = require('fs');
 const _ = require('lodash');
 const readLine = require('readline');
@@ -96,6 +98,7 @@ class GetLocations extends EventEmitter {
         if (decode) {
           lineRead = deNormalise(lineRead);
         }
+
         currentCountry.locations[locationsFound].details = _.omit(lineRead, [
           'country',
           'location',
@@ -106,6 +109,7 @@ class GetLocations extends EventEmitter {
           'date',
           'remarks',
         ]);
+
         locationsFound += 1;
       }
     });
@@ -119,7 +123,7 @@ class GetLocations extends EventEmitter {
 }
 /**
  * function deNormalise 
- * @param {string} LineRead is an array of named pairs matcing the UNLOCODE
+ * @param {string} LineRead is an array of named pairs matching the UNLOCODE
  * 'change','country'..coordinate, remarks fields
  * @return {string} that has been denormalised 
  */
@@ -128,41 +132,41 @@ function deNormalise(LineRead) {
   // remove the '-' chars and swap the B (border crossing) designator to an 8
   let locationFunction = _.replace(LineRead.function, /\W/g, '');
   locationFunction = _.replace(locationFunction, /b/g, '9');
-  
+  console.log(LineRead)
   
   let normLocationFunction = [];
-  
-  // TODO need to change function to OBJECT value pairs and not array
-  
-  
-  for (let value of locationFunction) {
+   // TODO need to change function to OBJECT value pairs and not array
+   for (let value of locationFunction) {
     normLocationFunction.push(functionsList[_.toInteger(value)] + ': true');
   }
   LineRead.function = normLocationFunction;
+
+
+
   // now the lat/long coordinate 
   // ddmmN dddmmW, ddmmS dddmmE
   if (LineRead.coordinates != '') {
     let coordinates = {
-      latitude: 0,
-      longitude: 0,
+      lat: 0,
+      lon: 0,
     };
-    coordinates.latitude = _.toNumber(
+    coordinates.lat = _.toNumber(
       LineRead.coordinates.substring(0, 2) +
       '.' +
       LineRead.coordinates.substring(2, 4)
     );
 
-    coordinates.longitude = _.toNumber(
+    coordinates.lon = _.toNumber(
       LineRead.coordinates.substring(6, 9) +
       '.' +
       LineRead.coordinates.substring(9, 11)
     );
 
     if (LineRead.coordinates.includes('S')) {
-      coordinates.latitude = coordinates.latitude * -1;
+      coordinates.lat = coordinates.lat * -1;
     }
     if (LineRead.coordinates.includes('W')) {
-      coordinates.longitude = coordinates.longitude * -1;
+      coordinates.lon = coordinates.lon * -1;
     }
     LineRead.coordinates = coordinates;
   } else {
