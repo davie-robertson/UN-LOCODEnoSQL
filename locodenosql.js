@@ -4,11 +4,11 @@ const readLine = require('readline');
 const EventEmitter = require('events');
 
 const functionsList = [
-  'Function not known', // 0
-  'Port',               // 1
-  'Rail Terminal',      // 2
-  'Road Terminal',      // 3
-  'Airport',            // 4
+  'Function not known',            // 0
+  'Port',                         // 1
+  'Rail Terminal',               // 2
+  'Road Terminal',              // 3
+  'Airport',                  // 4
   'Postal Exchange Office',  // 5
   'Multimodal Function',    // 6
   'Fixed Transport Functions', // 7
@@ -75,7 +75,7 @@ class GetLocations extends EventEmitter {
         if (countriesFound) {
           // emit the now complete UNLOCODE country collection
           _this.emit('recordFound', currentCountry);
-          if (currentCountry._id == 'AE') console.log(JSON.stringify(currentCountry, true, 3));
+          // if (currentCountry._id == 'AE') console.log(JSON.stringify(currentCountry, true, 3));
           locationsFound = 0; //  Reset the location index for the new country
         }
 
@@ -108,8 +108,9 @@ class GetLocations extends EventEmitter {
             'date',
             'remarks',
           ]);
+          locationsFound += 1;
         }
-        locationsFound += 1;
+
       }
     });
 
